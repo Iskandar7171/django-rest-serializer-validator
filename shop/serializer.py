@@ -37,9 +37,10 @@ class ProductSerializer(ModelSerializer):
         print(value)
         if value == False:
             raise ValidationError("false bolmasin!!")
-        
+        return value
 
     def validate_price(self, value):
         print(value)
         if value <= 2000:
             raise ValidationError("pulingiz yetmayapti!!!!1")
+        return value
